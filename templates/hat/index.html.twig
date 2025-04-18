@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <a href="{{ path('create_hat') }}">Create</a>
+    <a href="{{ path('materials') }}">Materials</a>
+
+    {% for hat in hats %}
+        <hr>
+        <p>{{ hat.name }}</p>
+        <p>{{ hat.price }}€</p>
+        <p>{{ hat.material.name }}</p>
+        <a href="{{ path('show_hat',{id:hat.id}) }}">see</a>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <p>{{ hat.name }}</p>
+    <p>{{ hat.price }}</p>
+    <a href="{{ path('delete_hat',{id:hat.id}) }}">delete</a>
+{% endblock %}

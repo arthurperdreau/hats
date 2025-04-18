@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <p>Create page :</p>
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    <button type="submit">Create</button>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <a href="{{ path('new_material') }}">create material</a>
+
+    <table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+
+    </tr>
+    </thead>
+<tbody>
+{% for material in materials %}
+<tr>
+    <td>{{ material.id }}</td>
+    <td>{{ material.name }}</td>
+
+</tr>
+{% endfor %}
+</tbody>
+    </table>
+{% endblock %}
